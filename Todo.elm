@@ -201,7 +201,7 @@ todoItem todo =
                     (if todo.editing   then "editing"    else "")
     in
 
-    node "li" [ "className" := className ] []
+    keyedNode "li" (show todo.id) [ "className" := className ] []
       [ node "div" [ "className" := "view" ] []
           [ eventNode "input"
               [ "className" := "toggle"
